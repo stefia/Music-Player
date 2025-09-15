@@ -18,9 +18,9 @@ body {
 
 .container {
     background-color: #212936;
-    width: 400px;
+    width: 360px;
     display: flex;
-    gap: 10px;
+    gap: 15px;
     flex-direction: column;
     justify-content: center;
     padding: 20px;
@@ -28,7 +28,7 @@ body {
     margin: 0 auto;
 }
 .song_img {
-    width: 360px;
+    width: 320px;
     height: auto;
     margin: 0 auto;
     border-radius: 20px;
@@ -83,7 +83,7 @@ button {
 }
 .song-duration {
     right: 0;
-    top: 25px;
+    top: 5px;
     position: absolute;
 }
 

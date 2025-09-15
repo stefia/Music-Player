@@ -56,14 +56,26 @@ function nextSong() {
 
 function prevSong() {
   // Add previous button implementation
-  if (currentSongIndex >= songs.length-1) {
-    currentSongIndex = 0;
+  if (currentSongIndex === 0) {
+    currentSongIndex = songs.length-1;
   } else {
     currentSongIndex--;
   }
   loadSong(currentSongIndex);
   playButton.click();
 }
+
+function changeSong(chooseSide) {
+  switch (chooseSide) {
+    case "next": 
+    nextSong.call(this);
+    break;
+    case "prev": 
+    prevSong.call(this);
+    break;
+  }
+}
+
 
 function loadSong(index) {
   // Add load song implementation
@@ -74,9 +86,11 @@ function loadSong(index) {
   songName.innerHTML = songCurrent.title;
   songAuthor.innerHTML = songCurrent.author;
   currentTime.innerHTML = '00:00';
-  song.addEventListener('loadedmetadata', () => {
+  song.addEventListener('loadedmetadata', function Load() {
     progressBar.max = song.duration;
     songDuration.innerHTML = formatTime(song.duration);
+    song.removeEventListener('loadedmetadata', Load);
+    // console.log('loadedmetadata');
   });
 }
 function formatTime(time) {
@@ -97,9 +111,13 @@ function updateProgressBar() {
   currentTime.innerHTML = formatTime(song.currentTime);
 }
 
+
+// nextButton.addEventListener("click", nextSong);
+// backButton.addEventListener("click", prevSong);
+nextButton.addEventListener("click", () => changeSong("next"));
+backButton.addEventListener("click", () => changeSong("prev"));
+
 playButton.addEventListener("click", playPause);
-nextButton.addEventListener("click", nextSong);
-backButton.addEventListener("click", prevSong);
 song.addEventListener("timeupdate", updateProgressBar);
 progressBar.addEventListener("change", function () {
   song.currentTime = progressBar.value;

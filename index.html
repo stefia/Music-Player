@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Music Player">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96"/>
     <title>Music Player</title>
   </head>
@@ -21,9 +22,9 @@
         <source src="resources/forest-lullaby-110624.mp3" type="audio/mp3">
       </audio>
       <div class="song_slider">
-        <input type="range" class="progress" id="progress" value="0">
         <span class="current-time">00:00</span>
         <span class="song-duration">00:00</span>
+        <input type="range" class="progress" id="progress" value="0">
       </div>
       <div class="song_controls">
         <button class="back">
