@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="container">
-      <img src="resources/cover-1.jpg" alt="" class="song_img">
+      <img src="resources/cover-1.jpg" alt="Cover" class="song_img">
       <div class="song_info">
         <div class="song_name"></div>
         <div class="song_author"></div>
@@ -24,15 +24,15 @@
       <div class="song_slider">
         <span class="current-time">00:00</span>
         <span class="song-duration">00:00</span>
-        <input type="range" class="progress" id="progress" value="0">
+        <input type="range" class="progress" id="progress" value="0" aria-label="Track progress">
       </div>
       <div class="song_controls">
-        <button class="back">
-          <img src="resources/Stop_and_play_fill-1.svg" alt="">
+        <button class="back" aria-label="Go back">
+          <img src="resources/Stop_and_play_fill-1.svg" alt="Back">
         </button>
-        <button class="player play"></button>
-        <button class="next">
-          <img src="resources/Stop_and_play_fill_reverse.svg" alt="">
+        <button class="player play" aria-label="Play"></button>
+        <button class="next" aria-label="Next song">
+          <img src="resources/Stop_and_play_fill_reverse.svg" alt="Next">
         </button>
       </div>
     </div>

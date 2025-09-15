@@ -25,7 +25,7 @@ body {
     justify-content: center;
     padding: 20px;
     border-radius: 20px;
-    margin: 0 auto;
+    margin: 100px auto 0;
 }
 .song_img {
     width: 320px;
@@ -70,7 +70,7 @@ button {
     text-align: center;
 }
 .song_author {
-    color: #4D5562;
+    color: #868d99;
     font-size: 12px;
 }
 .song_slider {
